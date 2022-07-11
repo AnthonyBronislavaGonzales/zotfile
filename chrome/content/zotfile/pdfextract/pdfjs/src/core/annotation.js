@@ -78,7 +78,7 @@ var Annotation = (function AnnotationClosure() {
     data.rect = Util.normalizeRect(rect);
     data.annotationFlags = dict.get('F');
 
-    if (data.subtype=='Highlight') {
+    if (data.subtype
       var content = dict.get('Contents');
       data.content = stringToPDFString(content || '');
       var title = dict.get('T');

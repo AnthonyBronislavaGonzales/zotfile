@@ -20,7 +20,7 @@ PDFJS.getPDFAnnotations = function(url, removeHyphens, progress, debug) {
     // Return a new promise (with support for legacy pdf.js promises)
     /* http://www.html5rocks.com/en/tutorials/es6/promises*/
     var extract = function(resolve, reject) {
-        var SUPPORTED_ANNOTS = ['Text','Highlight','Underline'],
+        var SUPPORTED_ANNOTS = ['Text','Highlight','Underline', 'Text Box', 'Rectangle', 'Strikethrough', 'Sticky Note', 'Typewriter'],
             obj = {annotations: [],
                 time:null,
                 url: typeof url=='string' ? url : ''
